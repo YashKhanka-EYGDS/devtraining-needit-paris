@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_58872_needit.autofillEmailAddress</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>autofillEmailAddress</name>
+        <script><![CDATA[var autofillEmailAddress = Class.create();
+autofillEmailAddress.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	getemail: function(){
+		var ga = new GlideRecord('sys_user');
+		//ga.get(this.getParameter('sysparm_id'));
+		ga.get(this.getParameter('sysparm_id')) ;
+		return ga.email + '';
+		
+	},
+
+    type: 'autofillEmailAddress'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-10 05:54:59</sys_created_on>
+        <sys_id>234194bcdb85a010eaad1461399619a4</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>autofillEmailAddress</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_include_234194bcdb85a010eaad1461399619a4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-12-10 10:29:47</sys_updated_on>
+    </sys_script_include>
+</record_update>
